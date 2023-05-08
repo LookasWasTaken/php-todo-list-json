@@ -1,0 +1,14 @@
+.container{
+    background-color: #001632;
+    color: grey;
+}
+
+.trash{
+    color: white;
+    background-color: #dc3545;
+}
+
+.btn_yellow{
+    border-color: yellow;
+    color: yellow;
+}
