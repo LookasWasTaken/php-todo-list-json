@@ -1,0 +1,32 @@
+[
+    {
+        "task": "HTML",
+        "done": true
+
+    },
+    {
+        "task": "CSS",
+        "done": true
+
+    },
+    {
+        "task": "Responsive Design",
+        "done": true
+
+    },
+    {
+        "task": "JavaScript",
+        "done": true
+
+    },
+    {
+        "task": "PHP",
+        "done": true
+
+    },
+    {
+        "task": "Laravel",
+        "done": true
+
+    }
+]
