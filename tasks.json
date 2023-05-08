@@ -1,32 +1,32 @@
 [
     {
         "task": "HTML",
-        "done": true
+        "done": "yes"
 
     },
     {
         "task": "CSS",
-        "done": true
+        "done": "yes"
 
     },
     {
         "task": "Responsive Design",
-        "done": true
+        "done": "yes"
 
     },
     {
         "task": "JavaScript",
-        "done": true
+        "done": "yes"
 
     },
     {
         "task": "PHP",
-        "done": true
+        "done": "no"
 
     },
     {
         "task": "Laravel",
-        "done": true
+        "done": "no"
 
     }
 ]

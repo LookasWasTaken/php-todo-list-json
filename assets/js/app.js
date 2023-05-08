@@ -40,6 +40,23 @@ createApp({
           console.error(error.message);
         });
     },
+    updateStatus(index) {
+      if (this.tasks[index].done === "yes") {
+        this.tasks[index].done = "no";
+      } else {
+        this.tasks[index].done = "yes";
+      }
+      axios
+        .post(this.URL2, this.tasks, {
+          headers: { "Content-Type": "multipart/form-data" },
+        })
+        .then((response) => {
+          this.tasks = response.data;
+        })
+        .catch((error) => {
+          console.error(error.message);
+        });
+    },
   },
   mounted() {
     axios

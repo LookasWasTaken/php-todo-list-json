@@ -31,7 +31,7 @@
             <ul class="list-unstyled w-50 mx-auto">
                 <li v-for="(task, index) in tasks" class="mb-2 bg-white text-black p-2 rounded">
                     <div class="d-flex justify-content-between align-items-center">
-                        <div class="task">
+                        <div @click="updateStatus(index)" class="task" :class="task.done === 'yes' ? 'done' : '' ">
                             {{task.task}}
                         </div>
                         <button @click="removeTask(index)" class="trash btn"><i class="fas fa-trash"></i></button>
