@@ -39,8 +39,8 @@
                 </li>
             </ul>
             <div class="input-group mb-3 w-50 mx-auto">
-                <input type="text" class="form-control" placeholder="Add Element..." aria-label="Add Element..." aria-describedby="button-addon2">
-                <button class="btn btn-outline-secondary btn_yellow" type="button" id="button-addon2">Add</button>
+                <input type="text" v-model="newTasks" @keyup.enter="addTask()" class="form-control" placeholder="Add Element..." aria-label="Add Element..." aria-describedby="button-addon2">
+                <button @click="addTask()" class="btn btn-outline-secondary btn_yellow" type="button" id="button-addon2">Add</button>
             </div>
         </div>
     </div>
