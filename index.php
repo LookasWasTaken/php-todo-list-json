@@ -29,7 +29,7 @@
         <div class="container py-4 text-center">
             <h1>TO DO LIST</h1>
             <ul class="list-unstyled w-50 mx-auto">
-                <li v-for="task in tasks" class="bg-white text-black p-2 rounded">
+                <li v-for="task in tasks" class="mb-2 bg-white text-black p-2 rounded">
                     <div class="d-flex justify-content-between align-items-center">
                         <div class="task">
                             {{task.task}}
