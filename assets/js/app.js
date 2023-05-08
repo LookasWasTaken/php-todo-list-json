@@ -6,6 +6,7 @@ createApp({
       tasks: [],
       URL: "list.php",
       URL2: "post.php",
+      URL3: "remove.php",
       newTasks: "",
     };
   },
@@ -17,16 +18,28 @@ createApp({
       });
       (this.newTasks = ""),
         axios
-        .post(this.URL2, this.tasks,
-        {
-          headers: { "Content-Type": "multipart/form-data" },
-        })
+          .post(this.URL2, this.tasks, {
+            headers: { "Content-Type": "multipart/form-data" },
+          })
           .then((response) => {
             this.tasks = response.data;
           })
           .catch((error) => {
             console.error(error.message);
           });
+    },
+    removeTask(index) {
+      this.tasks.splice(index, 1);
+      axios
+        .post(this.URL3, this.tasks, {
+          headers: { "Content-Type": "multipart/form-data" },
+        })
+        .then((response) => {
+          this.tasks = response.data;
+        })
+        .catch((error) => {
+          console.error(error.message);
+        });
     },
   },
   mounted() {
