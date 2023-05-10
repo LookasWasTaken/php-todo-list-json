@@ -44,13 +44,11 @@ createApp({
         });
     },
     updateStatus(index) {
-      if (this.tasks[index].done === "yes") {
-        this.tasks[index].done = "no";
-      } else {
-        this.tasks[index].done = "yes";
+      const data = {
+        index: index
       }
       axios
-        .post(this.URL_UPDATE, this.tasks, {
+        .post(this.URL_UPDATE, data, {
           headers: { "Content-Type": "multipart/form-data" },
         })
         .then((response) => {
