@@ -29,9 +29,11 @@ createApp({
           });
     },
     removeTask(index) {
-      this.tasks.splice(index, 1);
+      const data = {
+        index: index
+      }
       axios
-        .post(this.URL_DELETE, this.tasks, {
+        .post(this.URL_DELETE, data, {
           headers: { "Content-Type": "multipart/form-data" },
         })
         .then((response) => {
