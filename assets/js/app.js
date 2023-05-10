@@ -5,23 +5,24 @@ createApp({
     return {
       tasks: [],
       URL: "list.php",
-      URL2: "post.php",
+      URL_ADD: "post.php",
+      URL_DELETE: "delete.php",
+      URL_UPDATE: "update.php",
       newTasks: "",
     };
   },
   methods: {
     addTask() {
-      this.tasks.push({
-        task: this.newTasks,
-        done: false,
-      });
-      (this.newTasks = ""),
+      const data = {
+        task: this.newTasks
+      }
         axios
-          .post(this.URL2, this.tasks, {
+          .post(this.URL_ADD, data, {
             headers: { "Content-Type": "multipart/form-data" },
           })
           .then((response) => {
             this.tasks = response.data;
+            this.newTasks = ""
           })
           .catch((error) => {
             console.error(error.message);
@@ -30,7 +31,7 @@ createApp({
     removeTask(index) {
       this.tasks.splice(index, 1);
       axios
-        .post(this.URL2, this.tasks, {
+        .post(this.URL_DELETE, this.tasks, {
           headers: { "Content-Type": "multipart/form-data" },
         })
         .then((response) => {
@@ -47,7 +48,7 @@ createApp({
         this.tasks[index].done = "yes";
       }
       axios
-        .post(this.URL2, this.tasks, {
+        .post(this.URL_UPDATE, this.tasks, {
           headers: { "Content-Type": "multipart/form-data" },
         })
         .then((response) => {
