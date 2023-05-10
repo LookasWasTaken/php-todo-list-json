@@ -8,6 +8,7 @@ createApp({
       URL_ADD: "post.php",
       URL_DELETE: "delete.php",
       URL_UPDATE: "update.php",
+      URL_REMOVE: "remove.php",
       newTasks: "",
     };
   },
@@ -58,6 +59,16 @@ createApp({
           console.error(error.message);
         });
     },
+    removeAll(){
+      axios
+      .post(this.URL_REMOVE)
+      .then((response) => {
+        this.tasks = response.data;
+      })
+      .catch((error) => {
+        console.error(error.message);
+      });
+    }
   },
   mounted() {
     axios

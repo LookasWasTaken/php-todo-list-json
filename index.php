@@ -27,7 +27,7 @@
 
     <div id="app">
         <div class="container py-4 text-center">
-            <h1>TO DO LIST</h1>
+            <h1 class="text-center">TO DO LIST</h1>
             <ul class="list-unstyled w-50 mx-auto">
                 <li v-for="(task, index) in tasks" class="mb-2 bg-white text-black p-2 rounded">
                     <div class="d-flex justify-content-between align-items-center">
@@ -41,6 +41,7 @@
             <div class="input-group mb-3 w-50 mx-auto">
                 <input type="text" v-model="newTasks" @keyup.enter="addTask()" class="form-control" placeholder="Add Element..." aria-label="Add Element..." aria-describedby="button-addon2">
                 <button @click="addTask()" class="btn btn-outline-secondary btn_yellow" type="button" id="button-addon2">Add</button>
+                <button @click="removeAll()" class="btn btn-outline-secondary btn_yellow" type="button" id="button-addon3"><i class="fa-solid fa-recycle"></i></button>
             </div>
         </div>
     </div>
