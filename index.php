@@ -41,7 +41,8 @@
             <div class="input-group mb-3 w-50 mx-auto">
                 <input type="text" v-model="newTasks" @keyup.enter="addTask()" class="form-control" placeholder="Add Element..." aria-label="Add Element..." aria-describedby="button-addon2">
                 <button @click="addTask()" class="btn btn-outline-secondary btn_yellow" type="button" id="button-addon2">Add</button>
-                <button @click="removeAll()" class="btn btn-outline-secondary btn_yellow" type="button" id="button-addon3"><i class="fa-solid fa-recycle"></i></button>
+                <button @click="removeDone()" class="btn btn-outline-secondary btn_yellow" type="button" id="button-addon3"><i class="fa-solid fa-trash-can-arrow-up"></i></button>
+                <button @click="removeAll()" class="btn btn-outline-secondary btn_yellow" type="button" id="button-addon4"><i class="fa-solid fa-recycle"></i></button>
             </div>
         </div>
     </div>
